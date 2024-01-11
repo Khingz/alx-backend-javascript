@@ -5,7 +5,10 @@ export default function cleanSet(set, startString) {
   const tempArr = [];
   for (const value of set) {
     if (value.startsWith(startString)) {
-      tempArr.push(value.replace(startString, ''));
+      const valStr = value.substring(startString.length);
+      if (valStr && valStr !== value) {
+        tempArr.push(valStr);
+      }
     }
   }
   return tempArr.join('-');
