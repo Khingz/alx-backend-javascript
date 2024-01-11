@@ -6,7 +6,7 @@ export default function updateStudentGradeByCity(students, city, newGrades) {
     if (matchingGrade) {
       updatedStudent.grade = matchingGrade.grade;
     } else {
-      updatedStudent.grade = 'NA';
+      updatedStudent.grade = 'N/A';
     }
     return updatedStudent;
   }).filter((student) => student.location === city);
