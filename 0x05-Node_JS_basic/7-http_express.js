@@ -11,11 +11,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/students', async (req, res) => {
-  let text = 'Hello Holberton School!\n';
+  const text = 'Hello Holberton School!\n';
   try {
     const data = await countStudents(db);
-    text += `${data.join('\n')}`
-    res.send(text);
+    res.send(${text}${data.join('\n')});
   } catch (err) {
     text += `${err.message}\n`;
     res.send(text);
