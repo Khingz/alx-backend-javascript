@@ -17,7 +17,7 @@ class StudentsController {
         }
         response.send(200, `${students.join('\n')}`);
       })
-      .catch(() => {
+      .catch((err) => {
         response.send(500, 'Cannot load the database');
       });
   }
