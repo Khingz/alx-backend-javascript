@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/students', async (req, res) => {
-  const text = 'Hello Holberton School!\n';
+  const text = 'This is the list of our students\n';
   try {
     const data = await countStudents(db);
     res.send(`${text}${data.join('\n')}`);
