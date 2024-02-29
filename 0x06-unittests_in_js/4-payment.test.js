@@ -5,7 +5,7 @@ const Utils = require('./utils');
 
 describe('Stubs', function () {
   it('Math is the same', () => {
-    const stubsUtils = sinon.stubs(Utils, 'calculateNumber');
+    const stubsUtils = sinon.stub(Utils, 'calculateNumber');
     stubsUtils.returns(10);
     const stubsConsole = sinon.stubs(console, 'log');
 
