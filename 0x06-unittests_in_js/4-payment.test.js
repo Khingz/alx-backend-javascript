@@ -7,7 +7,7 @@ describe('Stubs', function () {
   it('Math is the same', () => {
     const stubsUtils = sinon.stub(Utils, 'calculateNumber');
     stubsUtils.returns(10);
-    const stubsConsole = sinon.stubs(console, 'log');
+    const stubsConsole = sinon.spy(console, 'log');
 
     sendPaymentRequestToApi(100, 20);
 
