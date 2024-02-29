@@ -1,6 +1,6 @@
-const chai = require('chai');
+var chai = require('chai');
 const calculateNumber = require('./1-calcul.js');
-const expect = chai.expect;
+var expect = chai.expect;
 
 describe('calculateNumber function three opts', function() {
   describe('sum two integers', function() {
